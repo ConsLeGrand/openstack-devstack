@@ -1,5 +1,5 @@
 # Installation Openstack avec la methode Devstack
-1. prerequis:
+1. Prerequis:
 La première étape consiste à installer les prérequis nécessaires au bon fonctionnement de DevStack.
 ```bash
 sudo apt update
@@ -10,7 +10,7 @@ sudo apt install git-all
 git --version
 ```
 
-2. préparation de l'environment 
+2. Préparation de l'environment 
 Nous allons maintenant préparer et configurer l’environnement système pour installer  DevStack
 
 ```bash
@@ -44,7 +44,7 @@ Exécutez la commande suivante pour lancer l’installation.
 ![Page acceuil OpenStack](./images/img1.png)
 NB : En cas d’erreur durant l’installation, identifiez et installez les dépendances manquantes, puis relancez le script
 
-4. verifier la version installer 
+4. Vérification de la version installer 
 Exécutez la commande suivante pour vérifier la version installée.
 
 ```bash
