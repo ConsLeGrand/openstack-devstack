@@ -1,5 +1,12 @@
 # Installation Openstack avec la methode Devstack
 1. Prerequis:
+- Ubuntu 24.04 propre (VM ou machine physique)
+- Minimum recommandé :
+    - 4 vCPU
+    - 8 Go RAM (16 Go idéal)
+    - 20–40 Go disque
+- Accès internet
+
 La première étape consiste à installer les prérequis nécessaires au bon fonctionnement de DevStack.
 ```bash
 sudo apt update
@@ -53,3 +60,4 @@ openstack --version
 Une fois l’installation terminée, les informations de connexion et les identifiants nécessaires sont fournis.
 ![Page acceuil OpenStack](./images/img2.png)
 ![Page acceuil OpenStack](./images/img3.png)
+
