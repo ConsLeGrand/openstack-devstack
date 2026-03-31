@@ -5,7 +5,7 @@
     - 4 vCPU
     - 8 Go RAM (16 Go idéal)
     - 20–40 Go disque
-- 2 cartes reseau une ayant  Accès internet
+- Deux (2) cartes réseau, dont une avec accès à Internet.
 
 La première étape consiste à installer les prérequis nécessaires au bon fonctionnement de DevStack.
 ```bash
@@ -35,12 +35,10 @@ Copiez et utilisez le contenu suivant dans le fichier local.conf
 [[local|localrc]]
 
 ADMIN_PASSWORD=<definir-le-mot-de-passe>
-
 DATABASE_PASSWORD=$ADMIN_PASSWORD
-
 RABBIT_PASSWORD=$ADMIN_PASSWORD
-
 SERVICE_PASSWORD=$ADMIN_PASSWORD
+HOST_IP=<ip interface choisi>
 ```
 3. Installation 
 Exécutez la commande suivante pour lancer l’installation.
@@ -61,3 +59,16 @@ Une fois l’installation terminée, les informations de connexion et les identi
 ![Page acceuil OpenStack](./images/img2.png)
 ![Page acceuil OpenStack](./images/img3.png)
 
+5. Commandes utiles:
+- Relancer les services :
+```bash
+ ./rejoin-stack.sh
+```
+- Arrêter :
+```bash
+./unstack.sh
+```
+- Nettoyer complètement :
+```bash
+./clean.sh
+```
