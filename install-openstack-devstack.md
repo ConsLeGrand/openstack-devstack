@@ -5,7 +5,7 @@
     - 4 vCPU
     - 8 Go RAM (16 Go idéal)
     - 20–40 Go disque
-- Accès internet
+- 2 cartes reseau une ayant  Accès internet
 
 La première étape consiste à installer les prérequis nécessaires au bon fonctionnement de DevStack.
 ```bash
