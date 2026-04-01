@@ -40,6 +40,43 @@ RABBIT_PASSWORD=$ADMIN_PASSWORD
 SERVICE_PASSWORD=$ADMIN_PASSWORD
 HOST_IP=<ip interface choisi>
 ```
+Dans le cas où vous souhaiteriez déployer les composants Swift, Ceilometer et Aodh, veuillez vous référer au contenu ci-dessous.
+
+```yaml
+[[local|localrc]]
+ADMIN_PASSWORD=<votre mot de passe>
+
+DATABASE_PASSWORD=$ADMIN_PASSWORD
+
+RABBIT_PASSWORD=$ADMIN_PASSWORD
+
+SERVICE_PASSWORD=$ADMIN_PASSWORD
+
+HOST_IP=<ip machine>
+
+# Activer Swift
+enable_service s-proxy s-object s-container s-account
+
+# Backend stockage objet
+SWIFT_REPLICAS=1
+SWIFT_HASH=swift
+SWIFT_TEMPURL_KEY=$ADMIN_PASSWORD
+
+
+# Enable Heat (Orchestration)
+enable_plugin heat https://opendev.org/openstack/heat
+
+# Enable Gnocchi (Metric Storage)
+enable_plugin gnocchi https://github.com/gnocchixyz/gnocchi
+
+# Enable Ceilometer (Data Collection) and Aodh (Alarming)
+CEILOMETER_BACKENDS=gnocchi
+enable_plugin ceilometer https://opendev.org/openstack/ceilometer
+enable_plugin aodh https://opendev.org/openstack/aodh
+
+# Optional: Add heat services specifically
+enable_service h-eng h-api h-api-cfn h-api-cw
+```
 3. Installation 
 Exécutez la commande suivante pour lancer l’installation.
 
